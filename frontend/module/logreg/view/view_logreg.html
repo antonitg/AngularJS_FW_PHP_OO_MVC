@@ -1,0 +1,111 @@
+<div class="form">
+
+  <ul class="tab-group">
+    <li class="tab active"><a ng-click="showReg()">Sign Up</a></li>
+    <li class="tab"><a ng-click="showLogin()">Log In</a></li>
+  </ul>
+  <a class="button button--social-login button--google" ng-click="fbg()"><i class="icon fa fa-google"></i>Login With Google</a>
+  <a class="button button--social-login button--github" ng-click="fbgh()"><i class="icon fa fa-github"></i>Login With Github</a>
+  <div class="tab-content">
+    <div id="signup" ng-show="!divlogin">
+      <h1>Sign Up for Free</h1>
+
+      <form class="formreg">
+
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              Full Name<span class="req">*</span>
+            </label>
+            <input type="text" id="regfullname" required autocomplete="off" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" id="regusername" required autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" id="regemail" required autocomplete="off" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Set A Password<span class="req">*</span>
+          </label>
+          <input type="password" id="regpasswd" required autocomplete="off" />
+        </div>
+
+        <a ng-click="register()" id="regbutton" class="button button-block">Get Started</a>
+
+      </form>
+
+    </div>
+
+    <div id="login" ng-show="divlogin">
+      <h1>Welcome Back!</h1>
+
+      <form  class="formlog">
+
+        <div class="field-wrap">
+          <label>
+            Username<span class="req">*</span>
+          </label>
+          <input type="text" id="logusername" required autocomplete="off" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Password<span class="req">*</span>
+          </label>
+          <input type="password" id="logpasswd" required autocomplete="off" />
+        </div>
+
+        <p class="forgot"><a href="">Forgot Password?</a></p>
+
+        <a ng-click="login()" id="logbutton" class="button button-block" >Log In</a>
+
+      </form>
+
+    </div>
+
+  </div><!-- tab-content -->
+
+</div>
+
+<div class="container form">
+	<div class="row">
+		<div class="col col">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <div class="panel-body">
+    
+                    <form id="register-form" role="form" autocomplete="off" class="form">
+    
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="veremail" name="email" placeholder="email address" class="form-control"  type="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input id="recover-submit" class="btn btn-lg btn-primary btn-block" ng-click="recover()" value="Reset Password" >
+                      </div>
+                      
+                      <input type="hidden" class="hide" name="token" id="token" value=""> 
+                    </form>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+</div>

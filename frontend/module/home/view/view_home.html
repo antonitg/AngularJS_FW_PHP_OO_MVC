@@ -1,0 +1,56 @@
+<div>
+    <section class="jumbotron text-center">
+        <h1 class="jumbotron-heading">{{title}}</h1>
+        <p class="lead text-muted">{{desc}}</p>
+    </section>
+    <section class="jumbotron text-center justify-content-around d-flex">
+        <div id="cat-btn-container">
+            <h1 class="jumbotron-heading">{{cattitle}}</h1>
+			<span class="span-cat-home" ng-repeat="btncat in Cats">
+				<h class="btn-cat-home btn btn-outline-dark btn-lg">{{btncat.id}}</h>
+			</span>
+
+        </div>
+		
+        <div style="max-width: 60%;" class="justify-content-center">
+            <div id="carouselExampleCaptions" class="carousel carousel-slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+					<li ng-repeat="ind in Cats" data-slide-to="{{$index}}" ng-if="$index == 0" class="active" data-target='#carouselExampleCaptions'></li>
+					<li ng-repeat="ind2 in Cats" data-slide-to="{{$index}}" ng-if="$index != 0" data-target='#carouselExampleCaptions'></li>				
+				</ol>
+                <div id="carousel-item-container" class="carousel-inner">
+					<div ng-repeat="cat in Cats" class="carousel-item active" ng-if="$index == 0">
+						<img src="{{cat.src}}" class="d-block w-100 cat-img" >
+						<div class="carousel-caption d-none d-md-block">
+							<h5>{{cat.id}}</h5>
+						</div>
+					</div>	
+					<div class="carousel-item" ng-repeat="cat2 in Cats" ng-if="$index != 0">
+						<img src="{{cat2.src}}" class="d-block w-100 cat-img">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>{{cat2.id}}</h5>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="" role="button" data-slide="prev">
+    				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    				<span class="sr-only">Previous</span>
+  				</a>
+  				<a class="carousel-control-next" href="" role="button" data-slide="next">
+    				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    				<span class="sr-only">Next</span>
+  				</a>
+			</div>
+		</div>
+    </section>
+
+    <section class="jumbotron text-center">
+        <div id="owlcarousel" class="owl-carousel owl-theme">
+			<div class="item" ng-repeat="itm in Slider" id="{{itm.registration}}" ng-click="redirectShop('{{itm.registration}}')">
+				<h4>{{itm.brand}} {{itm.model}}</h4>
+				<img class="user-image" src="{{itm.src}}" ng-click="redirectShop({{'itm.registration'}})">
+			</div>
+        </div>
+    </section>
+
+</div>

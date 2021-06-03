@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app = "loremipsumcars" lang="zxx">
+	<head>
+		<title>Lorem Ipsum Cars</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+		<link rel="stylesheet" href="view/assets/css/logreg.css"/>
+		<link rel="stylesheet" href="view/assets/css/general.css"/>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5_UAGQqEd6t0rKFvROtTvEh3ZllSrhzw&callback=initMap"> </script>
+
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+		<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+        <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js">
+		</script>
+		        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+		<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+        <script type = "text/javascript" src = "app.js"></script>
+				<script type = "text/javascript" src = "apiconnector.js"></script>
+		        <script type = "text/javascript" src = "module/shop/services/services_shop.js"></script>
+        <script type = "text/javascript" src = "module/home/controller/controller_home.js"></script>
+		<script type = "text/javascript" src = "module/shop/controller/controller_shop.js"></script>
+				<script type = "text/javascript" src = "module/logreg/services/services_logreg.js"></script>
+				<script type = "text/javascript" src = "module/logreg/controller/controller_logreg.js"></script>
+				<script type = "text/javascript" src = "module/logreg/controller/controller_logregRecover.js"></script>
+		<script type = "text/javascript" src = "module/shop/controller/controller_shopDetails.js"></script>
+		<script type = "text/javascript" src = "//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-touch.js"></script>
+        <script type = "text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>
+
+        <script type = "text/javascript" src = "//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+        <script type = "text/javascript" src = "//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>        
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div ng-include = '"view/inc/menu.view.html"'></div>
+        <div ng-view autoscroll = "true"></div>
+        <div ng-include = '"view/inc/footer.view.html"'></div>
+    </body>
+</html>
