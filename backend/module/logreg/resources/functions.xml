@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+    <function>
+        <name>list</name>
+        <uri>list</uri>
+    </function>
+    <function>
+        <name>login</name>
+        <uri>login</uri>
+    </function>
+    <function>
+        <name>register</name>
+        <uri>register</uri>
+    </function>
+    <function>
+        <name>sendVerifyEmail</name>
+        <uri>sendVerifyEmail</uri>
+    </function>
+    <function>
+        <name>verify</name>
+        <uri>verify</uri>
+    </function>
+    <function>
+        <name>recover</name>
+        <uri>recover</uri>
+    </function>
+    <function>
+        <name>verifyToken</name>
+        <uri>verifyToken</uri>
+    </function>
+    <function>
+        <name>sendRecoverEmail</name>
+        <uri>sendRecoverEmail</uri>
+    </function>
+    <function>
+        <name>recoverToken</name>
+        <uri>recoverToken</uri>
+    </function>
+    <function>
+        <name>setPasswdRecovered</name>
+        <uri>setPasswdRecovered</uri>
+    </function>
+	<function>
+        <name>social</name>
+        <uri>social</uri>
+    </function>
+    
+</functions>

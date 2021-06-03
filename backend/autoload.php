@@ -1,0 +1,32 @@
+<?php
+//////
+
+require ('paths.php');
+
+//////
+spl_autoload_register(null, false);
+spl_autoload_extensions('.php,.inc.php,.class.php,.class.singleton.php');
+spl_autoload_register('loadClasses');
+//////
+function loadClasses($className) {
+    $breakClass = explode('_', $className);
+    $modelName = "";
+    //////
+    if (isset($breakClass[1])) {
+        $modelName = strtoupper($breakClass[1]);
+    }// end_if
+    //////
+    if (file_exists(SITE_ROOT . 'backend/module/' . $breakClass[0] . '/model/'. $modelName . '/' . $className . '.class.singleton.php')) {
+        set_include_path(SITE_ROOT . 'backend/module/' . $breakClass[0] . '/model/' . $modelName.'/');
+        spl_autoload($className);
+    }else if (file_exists(SITE_ROOT . 'backend/model/' . $className . '.class.singleton.php')){
+        set_include_path(SITE_ROOT . 'backend/model/');
+        spl_autoload($className);
+    }else if (file_exists(SITE_ROOT . 'backend/model/' . $className . '.class.php')){
+        set_include_path(SITE_ROOT . 'backend/model/');
+        spl_autoload($className);
+    }else if (file_exists(SITE_ROOT . 'backend/utils/' . $className . '.inc.php')) {
+        set_include_path(SITE_ROOT . 'backend/utils/');
+        spl_autoload($className);
+    }// end_else
+}// end_loadClasses
