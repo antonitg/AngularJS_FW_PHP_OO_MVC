@@ -1,11 +1,10 @@
 # AngularJS_FW_PHP_OO_MVC
 ## Table of Contents
 1. [Proyecto](#Proyecto)
-2. [Estado](#Estado)
-3. [Funciones](#Funciones)
-4. [Tecnologías Empleadas](#Tecnologías-empleadas)
-5. [Librerías Empleadas](#Librerías-empleadas)
-6. [Online](#Online)
+2. [Funciones](#Funciones)
+3. [Tecnologías Empleadas](#Tecnologías-empleadas)
+4. [Librerías Empleadas](#Librerías-empleadas)
+5. [Online](#Online)
 
 # Proyecto!
 
@@ -46,7 +45,7 @@ La tienda de la web es la parte más importante de la web, en la cual el cliente
 
 
 
-3. __LogIn:__ 
+4. __LogIn:__ 
 En el modulo de LogIn el usuario puede registrarse, conectarse a su cuenta, o modificar su contraseña si se le ha olvidado.
 
   * Registro
